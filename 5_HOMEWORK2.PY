@@ -1,6 +1,3 @@
-# import random
-# import pygame
+"""Это дз в папке Doll"""
 
-# class SuperMarket:
-#    def __init__(self):
 
