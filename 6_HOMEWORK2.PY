@@ -6,7 +6,7 @@ class BankAccount:
         self.age = 0
         self.surname = None
     
-
+    
     def plus(self, amount):
         self.balance += amount
         print(f"Ваш баланс пополнен на {self.balance} сом .")
