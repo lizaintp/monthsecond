@@ -38,4 +38,4 @@ if connection:
     print("успешное подключение")
     create_table(connection, sql_create_table)
     create_products(connection, ("Apple", 27.10, 20))
-
+    create_products(connection, ("Banana", 29.10, 10))
