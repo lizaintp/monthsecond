@@ -14,10 +14,7 @@ class Computer:
     
 
     def __make_computations(self):
-        print(f""" Результат сложения: {self.cpu+self.memory},
-               Результат вычитания: {self.cpu-self.memory},
-               Результат умножения: {self.cpu*self.memory},
-               Результат деления: {self.cpu/self.memory}""")
+        print(f""" Результат сложения: {self.cpu+self.memory},\nРезультат вычитания: {self.cpu-self.memory},\nРезультат умножения: {self.cpu*self.memory},\nРезультат деления: {self.cpu/self.memory}""")
         
 
     @property
@@ -26,7 +23,7 @@ class Computer:
 
 
 
-
+ 
 acer = Computer("acer aspire 5", 4500, 8)
 acer.make_computions()
 
@@ -44,3 +41,7 @@ class Laptop(Computer):
 acer_2 = Laptop("acer3", 1235, 4, 755)
 acer_2.make_computions()
 acer_2.info()
+print(acer_2.name)
+print(acer.cpu)
+
+

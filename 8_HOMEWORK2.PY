@@ -77,6 +77,7 @@ class Bank:
 
             elif you == 3:
                 name = input("Введите ваше имя: ")
+                # if you in 
                 all = int(input("Введите сколько денег хотите снять: "))
                 if all > self.wallet:
                     print(f"Недостаточно средств ")

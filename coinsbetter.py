@@ -7,6 +7,9 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS mentors(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
                fullname VARCHAR (100) NOT NULL,
+               age INTEGER NOT NULL,
+               email TEXT NOT NULL,
+               mentor_which_month INTEGER,
                which_month INTEGER,
                coins INTEGER DEFAULT 0
 );
@@ -15,15 +18,21 @@ CREATE TABLE IF NOT EXISTS mentors(
 class GeeksMentors:
     def __init__(self):
         self.fullname = None
+        self.age = 0
+        self.email = None
+        mentor_which_month = 0
         self.coins = 0
         self.which_month = 0
 
-    def register(self, fullname, which_month):
+    def register(self, fullname, age, email, which_month, mentor_which_month):
         self.fullname = fullname
+        self.age = age
+        self.email = email
         self.which_month = which_month
+        self.mentor_which_month = mentor_which_month
         cursor.execute(f"""
-    INSERT INTO mentors (fullname, coins, which_month)
-                       VALUES ('{fullname}', 0, {which_month});""")
+INSERT INTO mentors (fullname, age, email, coins, which_month, mentor_which_month)
+                       VALUES ('{fullname}', '{age}', '{email}', 0, {which_month}, '{mentor_which_month}');""")
         connect.commit()
 
     def plus_coins(self, amount, mentor_name):
@@ -43,8 +52,11 @@ class GeeksMentors:
             command = int(input("Введите цифру: "))
             if command ==1:
                 fullname = input("Введите имя ментора: ")
-                which_month = int(input("Введите месяц ментора: "))
-                self.register(fullname, which_month)
+                age = int(input("Введите возраст ментора: "))
+                email = input("Введите email ментора: ")
+                which_month = int(input("Введите в каком месяце учится ментор: "))
+                mentor_which_month = int(input("Введите месяц ментора: "))
+                self.register(fullname, age, email, which_month, mentor_which_month)
 
             elif command == 2:
                 mentor_name = input("Введите имя ментора: ")

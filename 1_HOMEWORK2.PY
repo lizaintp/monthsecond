@@ -1,24 +1,24 @@
-#1
-# class Fruits:
-#     def __init__(self, name, color, weight):
-#         self.name = name
-#         self.color = color
-#         self.weight = weight
+1
+class Fruits:
+    def __init__(self, name, color, weight):
+        self.name = name
+        self.color = color
+        self.weight = weight
 
-#     def info(self):
-#         print(f"название - {self.name}, \nцвет -  {self.color}, \nмасса - {self.weight}")
+    def info(self):
+        print(f"название - {self.name}, \nцвет -  {self.color}, \nмасса - {self.weight}")
 
-# apple = Fruits("apple","red", 242 )
-# apple.info()        
-# print("apple:" , apple.name)
-# banana = Fruits("banana","yellow", 240)
-# banana.info()
-# print("banana:" , banana.color)
-# pear = Fruits("pear","green" , 150)
-# pear.info()
-# print("banana:" , pear.weight)
+apple = Fruits("apple","red", 242 )
+apple.info()        
+print("apple:" , apple.name)
+banana = Fruits("banana","yellow", 240)
+banana.info()
+print("banana:" , banana.color)
+pear = Fruits("pear","green" , 150)
+pear.info()
+print("banana:" , pear.weight)
 
-#2
+# 2
 # class Car:
 #     def __init__(self, model, year, color):
 #         self.model = model

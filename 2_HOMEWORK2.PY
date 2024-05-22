@@ -27,8 +27,8 @@ class Teacher(Person):
         for i in range(self.experience):
             self.salary += 3000
         print(f"Зарплата: {self.salary}")
-    def introduce_myself(self):
         
+    def introduce_myself(self):
         print(f"Опыт работы: {self.experience} лет")
         # print(f"Зарплата {self.salary}")
         

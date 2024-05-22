@@ -1,7 +1,7 @@
 # #СУБД - СИСТЕМА УПРАВЛЕНИЯ БАЗЫ ДАННЫХ
 # #БД - БАЗА ДАННЫХ
 # #db - date base
-# """CRUD - СОЗДАЕТСЯ ЧИТАЕТ ОБНОВЛЯЕТСЯ УДАЛЯЕТСЯ = CREATE READ UPDATE DELETE """
+# """CRUD - СОЗДАЕТСЯ ЧИТАЕТСЯ ОБНОВЛЯЕТСЯ УДАЛЯЕТСЯ = CREATE READ UPDATE DELETE """
 # import sqlite3
 
 # def create_connection(db_name):
@@ -91,12 +91,13 @@ def create_student(conn, student: tuple):
     cursor = conn.cursor()
     cursor.execute(sql,student)
     conn.commit()
-    
+    # conn  или connection 
 def update_students_mark(conn, id, new_mark):
     sql = """ UPDATE students SET mark=?  WHERE id = ? """
     cursor = conn.cursor()
     cursor.execute(sql, (new_mark, id))
     conn.commit()
+
 
 
 # создаем столбцы с подходящим типом данных
@@ -126,9 +127,7 @@ if connection:
     create_student(connection, ('Байбалаев Аслан', 15, 'много чего любит', "05-07-2008", 100.00, True))
     update_students_mark(connection, 2, 100.00)
     update_students_mark(connection, 4, 100.00)
-
-
-
+                                          
 
 
 

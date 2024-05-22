@@ -57,7 +57,7 @@
 #########Новая тема
 #Магические методы dunder (double underscore) окружены двумя нижними почеркиваниями
 """В Python  мы не вызываем эти методы , они вызываются автоматически"""
-from typing import Any
+# from typing import Any
 
 
 class Food:
@@ -110,21 +110,27 @@ class Food:
 pizza = Food(400, 500)
 hamburger = Food(60, 280)
 print(pizza)
-pizza(2,8)
+# pizza(2,8)
 print(pizza+hamburger)
 print(pizza-hamburger)
 print(pizza*hamburger)
 print(pizza/hamburger)
 print(pizza//hamburger)
-food = Food(798, 390) # вызывается __init__ 
-print(food.price, food.weight) 
-food.info()
-print(food) #__str__
-food(2,5)  #__call__
+print(pizza==hamburger)
+# food = Food(798, 390) # вызывается __init__ 
+# print(food.price, food.weight) 
+# food.info()
+# print(food) #__str__
+# food(2,5)  #__call__
 
 print(25%2)
 
 
 
+# @liza_chert.setter
+# def aman_loh(self, aman):
+#     self.aman_loh = aman
 
-
+# @property
+# def aman_loh(self):
+#     return self._aman_loh
